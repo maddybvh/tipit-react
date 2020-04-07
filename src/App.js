@@ -118,8 +118,8 @@ function App() {
         const {bill, tip, total} = result //destructuring
         return (
             <tr key={tip}>
-              <td key={bill}>${bill}</td>
-              <td key={tip}>${tip}</td>
+              <td key={bill}>${bill.toFixed(2)}</td>
+              <td key={tip}>${tip.toFixed(2)}</td>
               <td key ={total}>${total}</td>
             </tr>
         )
