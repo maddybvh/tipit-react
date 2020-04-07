@@ -130,7 +130,7 @@ function App() {
       return (
         <React.Fragment>
           <div className="container">
-            <h1 className="text-center">TipiT</h1>
+            <h1 className="text-center mt-4 ml-3">TipiT</h1>
             <fieldset className="form-group col-9 col-md-4 mx-auto">
               <div className="form-group row d-flex justify-content-center">
                 <label className="col-form-label">
@@ -174,7 +174,7 @@ function App() {
               </div>  
             </fieldset>
             <div className="text-center col-md-9 mx-auto">
-              <div>{this.state.message}</div>
+              <div className="mb-2 ml-3">{this.state.message}</div>
               <table id='results' className="table">
                   <tbody>
                     <tr>
