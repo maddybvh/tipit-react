@@ -9,11 +9,8 @@ export const CurrencyInput = ({ value, onChange, ...props}) => {
     <React.Fragment>
         <div>$</div>
         <input 
-            keyboardType={'decimal-pad'}
             value={value}
-            onChangeText={onChange}
+            onChange={e => onChange(e.target.value)}
             />
     </React.Fragment>
   )}
-
-  

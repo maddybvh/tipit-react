@@ -7,9 +7,8 @@ export const PercentInput = ({ defaultValue, onChange, ...props}) => {
     return (
         <React.Fragment>
             <input 
-                keyboardType={'numeric'}
                 defaultValue={defaultValue}
-                onChangeText={onChange}
+                onChange={e => onChange(e.target.value)}
                 />
             <div>%</div>
         </React.Fragment>

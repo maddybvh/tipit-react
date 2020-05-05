@@ -13,7 +13,7 @@ export const InfoModal = () => {
    const { isShowing, toggle } = useModal();
 
    return (
-      <View style = {[styles.container, {backgroundColor: colors.background}]}>
+      <React.Fragment>
          <Modal 
             animationType = {"slide"} transparent = {false}
             visible = {isShowing}

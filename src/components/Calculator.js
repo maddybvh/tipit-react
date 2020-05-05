@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { CurrencyInput } from './CurrencyInput';
 import { PercentInput } from './PercentInput';
 import { Dashes } from './Dashes';
@@ -92,10 +92,11 @@ export const Calculator = () => {
   const [message, setMessage] = useState('');
 
   
-  async function handleBill (text) {
-    await setBill(text)
+  function handleBill (text) {
+    setBill(text);
     setResults(findResults());
   }
+  
   async function handleTipLow (text) {
     await setTipLow(text);
     setResults(findResults());
@@ -172,10 +173,10 @@ export const Calculator = () => {
             {/* If there are results, print the message and clear button. */}
             {results.length > 0 &&
                 <React.Fragment >
-                    <div>
+                    <React.Fragment>
                       {message}
-                    </div>
-                    <button onPress={clearAll} >
+                    </React.Fragment>
+                    <button onClick={clearAll} >
                         <div >X Clear</div>
                     </button>
                 </React.Fragment>
@@ -183,7 +184,7 @@ export const Calculator = () => {
         </React.Fragment>
         <React.Fragment >
           <Dashes />
-          {/* <Results results={results}/> */}
+          <Results results={results}/>
         </React.Fragment>               
     </React.Fragment>
     );
