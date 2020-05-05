@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { CurrencyInput } from './CurrencyInput';
 import { PercentInput } from './PercentInput';
 import { Dashes } from './Dashes';
@@ -105,17 +104,17 @@ export const Calculator = () => {
     await setTipHigh(text)
     setResults(findResults());
   }
-  clearTable = () => {
+  const clearTable = () => {
     setResults([]);
     setMessage('');
   }
-  clearAll = () => {
+  const clearAll = () => {
     setBill('');
     clearTable();
   }
 
   //Update the state based on the functions above
-  findResults = () => {
+  const findResults = () => {
     const billFloat = parseFloat(bill);
     const tipLowFloat = parseFloat(tipLow);
     const tipHighFloat = parseFloat(tipHigh);
@@ -140,91 +139,52 @@ export const Calculator = () => {
   }
 
   return (
-    <View>                          
-        <View style={styles.inputRow}>
-          <View style={{flex: 1}}>
-            <Text style={[styles.label, {color: colors.text}]}>Your Bill:</Text>
-            <Text style={[styles.helper, {color: colors.text}]}>Pre-tip amount</Text>
-          </View>
-          <CurrencyInput style={{flex: 2}}
+    <React.Fragment>                          
+        <React.Fragment>
+          <React.Fragment >
+            <div>Your Bill:</div>
+            <div>Pre-tip amount</div>
+          </React.Fragment>
+          <CurrencyInput
             label='Bill'
             value={bill}
             onChange={handleBill}
           />
-        </View>
-        <View style={styles.inputRow}>
-            <View>
-              <Text style={[styles.label, {color: colors.text}]}>Tip Range:</Text>
-              <Text style={[styles.helper, {color: colors.text}]}>Low to high</Text>
-            </View>
-            <View style={styles.inputGroup}>
+        </React.Fragment>
+        <React.Fragment>
+            <React.Fragment>
+              <div>Tip Range:</div>
+              <div>Low to high</div>
+            </React.Fragment>
+            <React.Fragment>
                 <PercentInput
                     defaultValue={context.defaultTipLow}
                     onChange={handleTipLow}
                 />
-                <Text style={[styles.normalText, {margin:7, color: colors.text}]}>to</Text>
+                <div>to</div>
                 <PercentInput
                     defaultValue={context.defaultTipHigh}
                     onChange={handleTipHigh}
                 />                
-            </View>
-          </View>
-          <View style={{minHeight: 50}}>
+            </React.Fragment>
+          </React.Fragment>
+          <React.Fragment>
             {/* If there are results, print the message and clear button. */}
             {results.length > 0 &&
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                    <Text 
-                      style={[styles.normalText, {flex: 3, color: colors.text}]}>
+                <React.Fragment >
+                    <div>
                       {message}
-                    </Text>
-                    <TouchableOpacity onPress={clearAll} style={{flex: 1, justifyContent: 'flex-start'}}>
-                        <Text style={[styles.clearButton, {color: colors.clear}]}>X Clear</Text>
-                    </TouchableOpacity>
-                </View>
+                    </div>
+                    <button onPress={clearAll} >
+                        <div >X Clear</div>
+                    </button>
+                </React.Fragment>
                 }
-        </View>
-        <View >
+        </React.Fragment>
+        <React.Fragment >
           <Dashes />
-          <Results results={results}/>
-        </View>               
-    </View>
+          {/* <Results results={results}/> */}
+        </React.Fragment>               
+    </React.Fragment>
     );
   }
-
-const styles = StyleSheet.create({
-  inputRow: {
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
-    alignItems: 'center',
-    marginVertical: 12,
-  }, 
-  label: {
-    fontFamily: 'JetBrainsMono-Regular', 
-    fontSize: 18,
-    lineHeight: 24,
-  },
-  helper: {
-    fontFamily: 'JetBrainsMono-Italic', 
-    fontSize: 10,
-    lineHeight: 14,
-  },
-  normalText: {
-    fontFamily: 'JetBrainsMono-Regular', 
-    fontSize: 12,
-    lineHeight: 20,
-    marginTop: 10,
-  },
-  clearButton: {
-      fontFamily: 'JetBrainsMono-Regular',
-      fontSize: 12,
-      lineHeight: 14,
-      color: '#FF0000',
-      textAlign: 'right',
-      padding: 12,
-  },
-  inputGroup: {
-    flexDirection: "row",
-    alignSelf: 'flex-end',
-    marginTop: -25,
-  }
-});
