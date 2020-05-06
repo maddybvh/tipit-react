@@ -7,8 +7,7 @@ export const PercentInput = ({ defaultValue, onChange, ...props}) => {
     const { colors } = context.useTheme()
     return (
         <React.Fragment>
-            <input
-                className={styles.input} 
+            <input 
                 style={{maxWidth: 40, paddingRight: 20, textAlign: 'right'}}
                 defaultValue={defaultValue}
                 onChange={e => onChange(e.target.value)}

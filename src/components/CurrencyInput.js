@@ -16,7 +16,6 @@ export const CurrencyInput = ({ value, onChange, ...props}) => {
                 $
             </span>
             <input
-                className={styles.input}
                 style={{paddingLeft: 20}}
                 value={value}
                 onChange={e => onChange(e.target.value)}
