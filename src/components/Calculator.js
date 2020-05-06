@@ -90,23 +90,18 @@ export const Calculator = () => {
   const [bill, setBill] = useState('');
   const [results, setResults] = useState([]);
   const [message, setMessage] = useState('');
-
   
-  function handleBill (text) {
+  const handleBill = (text) => {
     setBill(text);
-    setResults(findResults());
   }
   
-  async function handleTipLow (text) {
-    await setTipLow(text);
-    setResults(findResults());
+  const handleTipLow = (text) => {
+    setTipLow(text);
   }
-  async function handleTipHigh (text) {
-    await setTipHigh(text)
-    setResults(findResults());
+  const handleTipHigh = (text) => {
+    setTipHigh(text)
   }
   const clearTable = () => {
-    setResults([]);
     setMessage('');
   }
   const clearAll = () => {
@@ -127,20 +122,24 @@ export const Calculator = () => {
       const palTotalArray = findPalTotals(billFloat, tipArray);
       
       if (palTotalArray && palTotalArray.length) { //both tip & total are arrays
-          setMessage('Woot! There are ' + palTotalArray.length + ' ways for the tip AND total to be palindromes!');
-          setResults(palTotalArray);
+          //setMessage('Woot! There are ' + palTotalArray.length + ' ways for the tip AND total to be palindromes!');
+          //setResults(palTotalArray);
           return palTotalArray
       } else if (tipArray && tipArray.length) {
-          setMessage('You can tip in ' + tipArray.length + ' palindromes!');
-          setResults(allTotalArray);
+          //setMessage('You can tip in ' + tipArray.length + ' palindromes!');
+          //setResults(allTotalArray);
           return allTotalArray
       }
     }
     else return []
   }
 
+  useEffect(() => {
+    setResults(findResults)
+  }, [bill, tipLow, tipHigh])
+
   return (
-    <React.Fragment>                          
+    <React.Fragment>                         
         <React.Fragment>
           <React.Fragment >
             <div>Your Bill:</div>
@@ -181,11 +180,11 @@ export const Calculator = () => {
                     </button>
                 </React.Fragment>
                 }
-        </React.Fragment>
-        <React.Fragment >
-          <Dashes />
-          <Results results={results}/>
-        </React.Fragment>               
+          </React.Fragment>
+          <React.Fragment >
+            <Dashes />
+            <Results results={results}/>
+          </React.Fragment>               
     </React.Fragment>
     );
   }
