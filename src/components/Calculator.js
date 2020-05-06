@@ -122,12 +122,10 @@ export const Calculator = () => {
       const palTotalArray = findPalTotals(billFloat, tipArray);
       
       if (palTotalArray && palTotalArray.length) { //both tip & total are arrays
-          //setMessage('Woot! There are ' + palTotalArray.length + ' ways for the tip AND total to be palindromes!');
-          //setResults(palTotalArray);
+          setMessage('Woot! There are ' + palTotalArray.length + ' ways for the tip AND total to be palindromes!');
           return palTotalArray
       } else if (tipArray && tipArray.length) {
-          //setMessage('You can tip in ' + tipArray.length + ' palindromes!');
-          //setResults(allTotalArray);
+          setMessage('You can tip in ' + tipArray.length + ' palindromes!');
           return allTotalArray
       }
     }
