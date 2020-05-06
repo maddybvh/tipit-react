@@ -28,6 +28,7 @@
 .inputGroup {
     text-align: 'left';
     display: inline-flex;
+    align-items: center;
 
 }
 
@@ -35,4 +36,17 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    align-items: center;
+}
+
+.input {
+    border: 1px solid gray;
+    border-radius: 3px;
+    height: 43px;
+    max-width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    background-color: none;
 }

@@ -4,7 +4,7 @@ import { PercentInput } from './PercentInput';
 import { Dashes } from './Dashes';
 import { Results } from './Results';
 import AppContext from './AppContext';
-import styles from '../theme/mystyle.module.css';
+import styles from '../theme/appstyles.module.css';
 
 let resultID = 0;
 
@@ -160,7 +160,7 @@ export const Calculator = () => {
                     defaultValue={context.defaultTipLow}
                     onChange={handleTipLow}
                 />
-                <div className={styles.normalText}>to</div>
+                <div className={styles.label} style={{paddingLeft: 15}}>to</div>
                 <PercentInput
                     defaultValue={context.defaultTipHigh}
                     onChange={handleTipHigh}
