@@ -22,14 +22,15 @@
     padding: 12;
     border: none;
     background: none;
-
+    min-width: 80px;
+    padding: 10px;
+    font-family: 'JetBrains Mono';
 }
 
 .inputGroup {
     text-align: 'left';
     display: inline-flex;
     align-items: center;
-
 }
 
 .inputRow {

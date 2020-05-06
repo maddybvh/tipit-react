@@ -155,7 +155,7 @@ export const Calculator = () => {
               <div className={styles.label}>Tip Range:</div>
               <div className={styles.helper}>Low to high</div>
             </div>
-            <div className={styles.inputGroup}>
+            <div className={styles.inputGroup} style={{marginRight: 8}}>
                 <PercentInput
                     defaultValue={context.defaultTipLow}
                     onChange={handleTipLow}
@@ -170,8 +170,8 @@ export const Calculator = () => {
           <React.Fragment>
             {/* If there are results, print the message and clear button. */}
             {results.length > 0 &&
-                <div className={styles.inputRow} >
-                    <div className={styles.normalText}>
+                <div className={styles.inputRow} style={{alignItems: 'flex-start'}}>
+                    <div className={styles.normalText} style={{paddingTop: 10}}>
                       {message}
                     </div>
                     <button 
