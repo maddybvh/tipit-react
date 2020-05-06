@@ -8,15 +8,16 @@ export const CurrencyInput = ({ value, onChange, ...props}) => {
 
     return (
     <React.Fragment>
-        <div style={{display: 'inline-flex'}}>
+        <div style={{display: 'inline-flex', alignItems: 'center'}}>
             <span 
                 className={styles.label}
-                style={{marginRight: -30}}>
+                style={{marginRight: -20, zIndex: 2}}
+                >
                 $
             </span>
             <input
                 className={styles.input}
-                style={{paddingLeft: 30}}
+                style={{paddingLeft: 20}}
                 value={value}
                 onChange={e => onChange(e.target.value)}
                 />
