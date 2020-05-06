@@ -36,7 +36,7 @@ export const InfoModal = () => {
             <div>
                <div className={styles.modal}>
                   <div style={{alignSelf: 'flex-start', flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center'}}>
-                     <button style={{padding: 5, flex: 1}} onClick = {closeModal}> 
+                     <button style={{padding: 5, border: 'none'}} onClick = {closeModal}> 
                            X
                      </button>
                      <Title />
@@ -65,9 +65,9 @@ export const InfoModal = () => {
                </div>
             </div>  
          </Modal>
-         <button style={{padding: 5}} onClick = {openModal}>
+         <button style={{padding: 5, border: 'none'}} onClick = {openModal}>
             <img 
-               src={(theme == 'light') ? require('../assets/info.png') : require('../assets/info-white.png')}
+               src={(theme == 'light') ? require('../assets/info.svg') : require('../assets/info-white.png')}
                />
             </button>
       </div>

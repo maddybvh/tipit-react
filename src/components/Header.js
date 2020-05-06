@@ -6,11 +6,12 @@ import { Dashes } from './Dashes';
 
 export const Header = () => (
   <React.Fragment>
-    <React.Fragment>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
       <InfoModal />
       <Title /> 
+      <div></div>
       {/* <SettingsModal /> */}
-    </React.Fragment>
+    </div>
     <Dashes />
   </React.Fragment>
 )
