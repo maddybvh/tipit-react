@@ -23,6 +23,3 @@ export const CurrencyInput = ({ value, onChange, ...props}) => {
         </div>
     </React.Fragment>
   )}
-
-
-//   <input style="padding-right:20px; text-align:right;" value="50"></input><span style="margin-left:-20px;">lb</span>
