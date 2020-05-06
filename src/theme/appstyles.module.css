@@ -66,6 +66,11 @@ input {
 }
 
 /* Results styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 th {
     font-size: 14px;
     line-height: 30px;
@@ -76,6 +81,4 @@ tr {
     line-height: 30px;
 }
 
-table {
-    width: 100%;
-}
+tr:nth-child(even) {background-color: #f2f2f2;}
