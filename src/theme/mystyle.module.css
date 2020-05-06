@@ -1,0 +1,38 @@
+
+.label {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.helper {
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.normalText {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.clearButton {
+    font-size: 12px;
+    line-height: 14px;
+    color: #FF0000;
+    text-align: 'right';
+    padding: 12;
+    border: none;
+    background: none;
+
+}
+
+.inputGroup {
+    text-align: 'left';
+    display: inline-flex;
+
+}
+
+.inputRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

@@ -5,6 +5,9 @@ import { Calculator } from './components/Calculator'
 import { Footer } from './components/Footer'
 import AppContext, { useTheme } from './components/AppContext';
 import { themedColors } from './theme/index'
+import styles from './index.css'
+
+
 
 export default function App () {
   // const _storeData = async () => {
@@ -82,14 +85,28 @@ export default function App () {
   //   </React.Fragment>;
   // }
   // else {
+
+
+    const styles = {
+      container: {
+        margin: 'auto',
+        width: '50%',
+        padding: 10,
+        textAlign: 'center',
+      }
+    }
+    
     return (
       <AppContext.Provider value={userSettings}>
-        <React.Fragment className="container">
+        <React.Fragment>
+          <div style={styles.container}>
             <Header />
             <Calculator />
             <Footer />
+          </div>
         </React.Fragment>
       </AppContext.Provider>
     )
   // }
 }
+

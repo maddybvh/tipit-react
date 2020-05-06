@@ -4,6 +4,7 @@ import { PercentInput } from './PercentInput';
 import { Dashes } from './Dashes';
 import { Results } from './Results';
 import AppContext from './AppContext';
+import styles from '../theme/mystyle.module.css';
 
 let resultID = 0;
 
@@ -138,45 +139,47 @@ export const Calculator = () => {
 
   return (
     <React.Fragment>                         
-        <React.Fragment>
-          <React.Fragment >
-            <div>Your Bill:</div>
-            <div>Pre-tip amount</div>
-          </React.Fragment>
+        <div className={styles.inputRow}>
+          <div >
+            <div className={styles.label}>Your Bill:</div>
+            <div className={styles.helper}>Pre-tip amount</div>
+          </div>
           <CurrencyInput
             label='Bill'
             value={bill}
             onChange={handleBill}
           />
-        </React.Fragment>
-        <React.Fragment>
-            <React.Fragment>
-              <div>Tip Range:</div>
-              <div>Low to high</div>
-            </React.Fragment>
-            <React.Fragment>
+        </div>
+        <div className={styles.inputRow}>
+            <div>
+              <div className={styles.label}>Tip Range:</div>
+              <div className={styles.helper}>Low to high</div>
+            </div>
+            <div className={styles.inputGroup}>
                 <PercentInput
                     defaultValue={context.defaultTipLow}
                     onChange={handleTipLow}
                 />
-                <div>to</div>
+                <div className={styles.normalText}>to</div>
                 <PercentInput
                     defaultValue={context.defaultTipHigh}
                     onChange={handleTipHigh}
                 />                
-            </React.Fragment>
-          </React.Fragment>
+            </div>
+          </div>
           <React.Fragment>
             {/* If there are results, print the message and clear button. */}
             {results.length > 0 &&
-                <React.Fragment >
-                    <React.Fragment>
+                <div className={styles.inputRow} >
+                    <div className={styles.normalText}>
                       {message}
-                    </React.Fragment>
-                    <button onClick={clearAll} >
-                        <div >X Clear</div>
+                    </div>
+                    <button 
+                      onClick={clearAll}
+                      className={styles.clearButton} >
+                        X Clear
                     </button>
-                </React.Fragment>
+                </div>
                 }
           </React.Fragment>
           <React.Fragment >

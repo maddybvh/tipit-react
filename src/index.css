@@ -8,14 +8,25 @@
   font-style: normal;
 }
 
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --darkBlue: #221C35;
+  --red: #FF0000;
+  --blue: #0000EE;
+  --pink: #F35A69;
+  --gray: #d3d3d3;
+  --darkGray: #A9A9A9;
+  --grid-width: 960;
+  --grid-column-width: 60;
+  --grid-columns: 12;
+  --container-width: 84vw;
+}
+
 body {
-  margin: 0;
+  margin: 5;
   font-family: 'JetBrains Mono';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
