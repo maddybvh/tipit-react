@@ -26,20 +26,33 @@ export const InfoModal = () => {
      setIsOpen(false);
    }
 
+   const customStyles = {
+      content : {
+        top                   : '25%',
+        left                  : '50%',
+        right                 : 'auto',
+        bottom                : 'auto',
+        marginRight           : '-50%',
+        transform             : 'translate(-50%, -50%)'
+      }
+    };
+
    return (
       <div>
          <Modal 
             isOpen = {modalIsOpen}
             onAfterOpen = {afterOpenModal}
             onRequestClose = {closeModal}
+            style={customStyles}
             >
             <div>
                <div className={styles.modal}>
-                  <div style={{alignSelf: 'flex-start', flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center'}}>
-                     <button style={{padding: 5, border: 'none'}} onClick = {closeModal}> 
+                  <div className={styles.inputRow} style={{alignContent: 'center', justifyContent: 'space-between'}}>
+                     <button className={styles.clearButton} style={{padding: 5, border: 'none', alignSelf: 'flex-start'}} onClick = {closeModal}> 
                            X
                      </button>
-                     <Title />
+                     <Title style={{alignSelf: 'flex-center'}}/>
+                     <div></div>
                   </div>
                   <Dashes />
                   <div className={styles.normalText}>What is this app?</div>
