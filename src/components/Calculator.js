@@ -140,7 +140,7 @@ export const Calculator = () => {
   return (
     <React.Fragment>                         
         <div className={styles.inputRow}>
-          <div >
+          <div style={{textAlign: "left"}}>
             <div className={styles.label}>Your Bill:</div>
             <div className={styles.helper}>Pre-tip amount</div>
           </div>
@@ -151,7 +151,7 @@ export const Calculator = () => {
           />
         </div>
         <div className={styles.inputRow}>
-            <div>
+            <div style={{textAlign: "left"}}>
               <div className={styles.label}>Tip Range:</div>
               <div className={styles.helper}>Low to high</div>
             </div>
@@ -160,7 +160,7 @@ export const Calculator = () => {
                     defaultValue={context.defaultTipLow}
                     onChange={handleTipLow}
                 />
-                <div className={styles.label} style={{paddingLeft: 15}}>to</div>
+                <div className={styles.normalText} style={{paddingLeft: 15, paddingRight: 5}}>to</div>
                 <PercentInput
                     defaultValue={context.defaultTipHigh}
                     onChange={handleTipHigh}
