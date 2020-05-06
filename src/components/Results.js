@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import AppContext from './AppContext';
+import styles from '../theme/appstyles.module.css';
 
 export const Results = ({results}) =>  {    
     const context = useContext(AppContext)
@@ -7,25 +8,25 @@ export const Results = ({results}) =>  {
 
     const renderTableData = () => {
         
-        return results.map((result, index) => {
+        return results.map((result) => {
           const {bill, tip, total} = result //destructuring
           return (
               <tr key={tip}>
-                <td key={bill}>${bill}</td>
-                <td key={tip}>${tip}</td>
-                <td key ={total}>${total}</td>
+                <td key={bill} style={{textAlign: 'left'}}>${bill} + </td>
+                <td key={tip} style={{textAlign: 'left'}}>${tip}</td>
+                <td key ={total} style={{textAlign: 'right'}}>= ${total}</td>
               </tr>
           )
         })
     }
 
     return (
-        <table id='results' className="table">
+        <table>
             <tbody>
             <tr>
-                <th scope="col">Bill</th>
-                <th scope="col">Tip</th>
-                <th scope="col">Total</th>
+                <th scope="col" style={{textAlign: 'left'}}>Bill</th>
+                <th scope="col" style={{textAlign: 'left'}}>Tip</th>
+                <th scope="col" style={{textAlign: 'right'}}>Total</th>
             </tr>
             {renderTableData()}
             </tbody>

@@ -150,7 +150,7 @@ export const Calculator = () => {
             onChange={handleBill}
           />
         </div>
-        <div className={styles.inputRow}>
+        <div className={styles.inputRow} style={{marginTop: 20}}>
             <div style={{textAlign: "left"}}>
               <div className={styles.label}>Tip Range:</div>
               <div className={styles.helper}>Low to high</div>

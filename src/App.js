@@ -5,7 +5,7 @@ import { Calculator } from './components/Calculator'
 import { Footer } from './components/Footer'
 import AppContext, { useTheme } from './components/AppContext';
 import { themedColors } from './theme/index'
-import styles from './index.css'
+import styles from './theme/appstyles.module.css';
 
 
 
@@ -87,19 +87,10 @@ export default function App () {
   // else {
 
 
-    const styles = {
-      container: {
-        margin: 'auto',
-        width: '50%',
-        padding: 10,
-        textAlign: 'center',
-      }
-    }
-    
     return (
       <AppContext.Provider value={userSettings}>
         <React.Fragment>
-          <div style={styles.container}>
+          <div className={styles.container}>
             <Header />
             <Calculator />
             <Footer />
