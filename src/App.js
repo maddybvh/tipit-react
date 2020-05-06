@@ -84,7 +84,7 @@ export default function App () {
   // else {
     return (
       <AppContext.Provider value={userSettings}>
-        <React.Fragment>
+        <React.Fragment className="container">
             <Header />
             <Calculator />
             <Footer />

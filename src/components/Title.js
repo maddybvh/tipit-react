@@ -6,7 +6,7 @@ export const Title = () => {
   const { colors } = context.useTheme()
   return (
     <React.Fragment>
-      <div>tipit</div> 
+      <h1>tipit</h1> 
     </React.Fragment>
 )}
 
