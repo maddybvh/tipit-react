@@ -183,13 +183,14 @@ export const Calculator = () => {
                 }
           </React.Fragment>
           <React.Fragment >
-            <div >
+            <div style={{position: 'fixed', top: 265, left: '25%', right: '25%', minWidth: 250}}>
               <Dashes />
-            </div>
+            
             {/* If there are results, print the results table. */}
             {results.length > 0 &&
               <Results results={results}/>
             }
+            </div>
           </React.Fragment>               
     </React.Fragment>
     );
