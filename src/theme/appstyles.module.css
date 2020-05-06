@@ -7,6 +7,10 @@
     text-align: center;
   }
 
+h1 {
+    margin-bottom: 0px;
+}
+
 /* Calculator styles */
 .label {
     font-size: 18px;
