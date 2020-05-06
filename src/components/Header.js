@@ -1,5 +1,5 @@
 import React from 'react';
-//import InfoModal from './InfoModal';
+import InfoModal from './InfoModal';
 //import SettingsModal from './SettingsModal';
 import { Title } from './Title';
 import { Dashes } from './Dashes';
@@ -7,7 +7,7 @@ import { Dashes } from './Dashes';
 export const Header = () => (
   <React.Fragment>
     <React.Fragment>
-      {/* <InfoModal /> */}
+      <InfoModal />
       <Title /> 
       {/* <SettingsModal /> */}
     </React.Fragment>
