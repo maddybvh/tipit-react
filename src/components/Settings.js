@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-//import ThemeToggle from './ThemeToggle.js';
+import ThemeToggle from './ThemeToggle.js';
 import AppContext from './AppContext';
 import { PercentInput } from './PercentInput';
 import styles from '../theme/appstyles.module.css';
@@ -30,7 +30,7 @@ export const Settings = () => {
             </div>
             <div className={styles.inputRow} style={{marginTop: 20}}>
                 <div className={styles.label}>Dark Mode:</div>
-                {/* <ThemeToggle /> */}
+                <ThemeToggle />
             </div>
         </div>
     );

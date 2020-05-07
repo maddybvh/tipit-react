@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { View, Switch } from "react-native";
+import { Switch } from '@material-ui/core';
 import AppContext from './AppContext';
 
 export default function ThemeToggle() {
@@ -13,12 +13,9 @@ export default function ThemeToggle() {
   }
 
   return (
-    <View >
-      <Switch style={{marginRight: 5}}
-          trackColor={{ false: "#767577", true: "#767577" }}
-          onValueChange={toggleSwitch}
-          value={isEnabled}
+      <Switch
+          onChange={toggleSwitch}
+          checked={isEnabled}
       />
-    </View>
   );
 }
