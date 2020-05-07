@@ -89,13 +89,13 @@ export default function App () {
 
     return (
       <AppContext.Provider value={userSettings}>
-        <React.Fragment>
+        <body style={{backgroundColor: colors.background}}>
           <div className={styles.container}>
             <Header />
             <Calculator />
             <Footer />
           </div>
-        </React.Fragment>
+        </body>
       </AppContext.Provider>
     )
   // }

@@ -30,7 +30,7 @@ export const InfoModal = () => {
             isOpen = {modalIsOpen}
             onAfterOpen = {afterOpenModal}
             onRequestClose = {closeModal}
-            style={{content: {top: 5, left: '15%', right: '15%', bottom: 5}}}
+            style={{content: {top: 5, left: '15%', right: '15%', bottom: 5, backgroundColor: colors.background}}}
             >
             <div>
                <div className={styles.modal}>
@@ -70,9 +70,11 @@ export const InfoModal = () => {
                </div>
             </div>  
          </Modal>
-         <button style={{padding: 5, border: 'none'}} onClick = {openModal}>
-            <img 
-               src={(theme == 'light') ? require('../assets/info.svg') : require('../assets/info-white.png')}
+         <button style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
+            <img
+               className={styles.icon}
+               // style={{backgroundColor: colors.background, margin: 0}}
+               src={(theme == 'light') ? require('../assets/info.svg') : require('../assets/info-white.svg')}
                />
             </button>
       </div>

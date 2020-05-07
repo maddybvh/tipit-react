@@ -140,7 +140,7 @@ export const Calculator = () => {
   }, [bill, tipLow, tipHigh])
 
   return (
-    <React.Fragment>                         
+    <div>                         
         <div className={styles.inputRow}>
           <div style={{textAlign: "left"}}>
             <div className={styles.label}>Your Bill:</div>
@@ -194,6 +194,6 @@ export const Calculator = () => {
             }
             </div>
           </React.Fragment>               
-    </React.Fragment>
+    </div>
     );
   }

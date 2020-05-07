@@ -33,7 +33,7 @@ export const SettingsModal = () => {
             isOpen = {modalIsOpen}
             onAfterOpen = {afterOpenModal}
             onRequestClose = {closeModal}
-            style={{content: {top: 5, left: '15%', right: '15%', bottom: 5}}}
+            style={{content: {top: 5, left: '15%', right: '15%', bottom: 5, backgroundColor: colors.background}}}
             >
 
             <div>
@@ -51,10 +51,10 @@ export const SettingsModal = () => {
                <Footer />
             </div>
          </Modal>
-         <button style={{padding: 5, border: 'none'}} onClick = {openModal}>
+         <button style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
             <img
-               src={require('../assets/settings.svg')} 
-               // src={(theme == 'light') ? require('../assets/settings.svg') : require('../assets/settings-white.svg')}
+               className={styles.icon}
+               src={(theme == 'light') ? require('../assets/settings.svg') : require('../assets/settings-white.svg')}
                />
          </button>
       </div>
