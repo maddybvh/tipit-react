@@ -47,7 +47,7 @@ export const SettingsModal = () => {
                   </button>                  
                </div>
                <Dashes />
-               {/* <Settings /> */}
+               <Settings />
                <Footer />
             </div>
          </Modal>
