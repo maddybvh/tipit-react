@@ -6,7 +6,7 @@ import styles from '../theme/appstyles.module.css';
 
 export const Settings = () => {
     const context = useContext(AppContext)
-    const { colors } = context.useTheme()
+    //const { colors } = context.useTheme()
 
     const defaultTipLow = context.defaultTipLow
     const defaultTipHigh = context.defaultTipHigh
@@ -17,14 +17,14 @@ export const Settings = () => {
             <div className={styles.inputRow}>
                 <div className={styles.label}>Low tip default:</div>
                 <PercentInput
-                    defaultValue={defaultTipLow}
+                    value={defaultTipLow}
                     onChange={context.updateTipLowContext}                  
                 />
             </div>
             <div className={styles.inputRow} style={{marginTop: 20}}>
                 <div className={styles.label}>High tip default:</div>
                 <PercentInput 
-                    defaultValue={defaultTipHigh}
+                    value={defaultTipHigh}
                     onChange={context.updateTipHighContext}
                 />
             </div>
