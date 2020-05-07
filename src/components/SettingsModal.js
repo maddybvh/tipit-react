@@ -1,66 +1,64 @@
 import React, { useContext } from 'react';
-import { Modal, Text, View, StyleSheet, Image, TouchableOpacity, SafeAreaView } from 'react-native';
+import Modal from 'react-modal';
 import { Title } from './Title';
 import { Footer } from './Footer';
 import { Dashes } from './Dashes';
 import { Settings } from './Settings.js';
-import useModal from '../hooks/useModal.js'
 import AppContext from './AppContext';
+import styles from '../theme/appstyles.module.css';
 
 export const SettingsModal = () => {
    const context = useContext(AppContext)
    const theme = context.theme
    const { colors } = context.useTheme()
-   const { isShowing, toggle } = useModal();
+
+
+   const [modalIsOpen,setIsOpen] = React.useState(false);
+   function openModal() {
+     setIsOpen(true);
+   }
+  
+   function afterOpenModal() {
+     // @TODO can probably be removed
+   }
+  
+   function closeModal(){
+     setIsOpen(false);
+   }
+
    return (
-      <View style = {[styles.container, {backgroundColor: colors.background}]}>
-         <Modal animationType = {"slide"} transparent = {false}
-            visible = {isShowing}
-            onRequestClose = {() => { console.log("Modal has been closed.") } }>
-            <View style={{flex: 1, backgroundColor: colors.background}}>
-               <SafeAreaView style = {[styles.modal, {backgroundColor: colors.background}]}>
-                  <View style= {{flexDirection: 'row', justifyContent: 'space-between'}}>
-                     <View style={{flex: 1}}></View>
-                     <Title style={{flex: 1}}/>
-                     <TouchableOpacity style={{padding: 5, flex: 1}} onPress = {() => {toggle()}}> 
-                           <Text style = {[styles.clear, {color: colors.clear}]}>X</Text>
-                     </TouchableOpacity>
-                  </View>
-                  <Dashes />
-                  <Settings />
-                  <Footer />
-               </SafeAreaView>
-            </View>
+      <div>
+
+         <Modal 
+            isOpen = {modalIsOpen}
+            onAfterOpen = {afterOpenModal}
+            onRequestClose = {closeModal}
+            style={{content: {top: 5, left: '15%', right: '15%', bottom: 5}}}
+            >
+
+            <div>
+               <div className={styles.inputRow} style={{alignItems: 'baseline', justifyContent: 'space-between'}}>
+                  <div style={{paddingLeft: '14%'}}></div>
+                  <div>
+                     <Title/>
+                  </div>
+                  <button className={styles.clearButton} style={{padding: 5, border: 'none'}} onClick = {closeModal}> 
+                        <img src={require('../assets/x-close.svg')} alt="close button"/>
+                  </button>                  
+               </div>
+               <Dashes />
+               {/* <Settings /> */}
+               <Footer />
+            </div>
          </Modal>
-         <TouchableOpacity style={{padding: 5}} onPress = {() => {toggle()}}>
-            <Image 
-               source={
-                  (theme == 'light') ? require('../../assets/settings.png') : require('../../assets/settings-white.png')
-                  } />
-         </TouchableOpacity>
-      </View>
+         <button style={{padding: 5, border: 'none'}} onClick = {openModal}>
+            <img
+               src={require('../assets/settings.svg')} 
+               // src={(theme == 'light') ? require('../assets/settings.svg') : require('../assets/settings-white.svg')}
+               />
+         </button>
+      </div>
    )
 }
 
 export default SettingsModal
-
-const styles = StyleSheet.create ({
-    container: {
-       padding: 10,
-    },
-    modal: {
-      flex: 1,
-      marginHorizontal: 8,
-    },
-    text: {
-       color: '#3f2949',
-       marginTop: 10,
-    },
-    clear: {
-      fontFamily: 'JetBrainsMono-Bold',
-      textAlign: 'right',
-      padding: 10,
-      fontSize: 18,
-   },
- })
- 
