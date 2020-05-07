@@ -6,10 +6,8 @@ export const Dashes = () => {
   const theme = useContext(AppContext).theme;
   return (
     <img 
-      src={require('../assets/dashes.svg')}
-        //  (theme == 'light') ? require('../assets/dashes.png') : require('../assets/dashes-white.png')
+      src={(theme === 'light') ? require('../assets/dashes.svg') : require('../assets/dashes-white.svg')}
       alt='dashes'
-      //style={{marginTop: 10, marginBottom: 10, width: '100%'}} 
       style={{width: '100%'}}
       ></img>
   )

@@ -7,9 +7,9 @@ export const PercentInput = ({ value, onChange, ...props}) => {
     const { colors } = context.useTheme()
     return (
         <React.Fragment>
-            <div style={{display: 'flex', alignItems: 'baseline', maxWidth: 40, marginRight: 15}}>
+            <div style={{display: 'flex', alignItems: 'baseline', maxWidth: 40, marginRight: 15, color: colors.text}}>
                 <input 
-                    style={{maxWidth: 40, paddingRight: 20, textAlign: 'right'}}
+                    style={{maxWidth: 40, paddingRight: 20, textAlign: 'right', backgroundColor: colors.background, color: colors.text}}
                     value={value}
                     onChange={e => onChange(e.target.value)}
                     />

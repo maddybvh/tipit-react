@@ -89,7 +89,7 @@ export default function App () {
 
     return (
       <AppContext.Provider value={userSettings}>
-        <body style={{backgroundColor: colors.background}}>
+        <body style={{backgroundColor: colors.background, color: colors.text}}>
           <div className={styles.container}>
             <Header />
             <Calculator />

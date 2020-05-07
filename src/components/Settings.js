@@ -6,13 +6,13 @@ import styles from '../theme/appstyles.module.css';
 
 export const Settings = () => {
     const context = useContext(AppContext)
-    //const { colors } = context.useTheme()
+    const { colors } = context.useTheme()
 
     const defaultTipLow = context.defaultTipLow
     const defaultTipHigh = context.defaultTipHigh
 
     return (
-        <div>
+        <div style={{color: colors.text}}>
             <h2 className={styles.normalText} style={{textAlign: 'center'}}>Settings</h2>                          
             <div className={styles.inputRow}>
                 <div className={styles.label}>Low tip default:</div>

@@ -33,7 +33,7 @@ export const InfoModal = () => {
             style={{content: {top: 5, left: '15%', right: '15%', bottom: 5, backgroundColor: colors.background}}}
             >
             <div>
-               <div className={styles.modal}>
+               <div className={styles.modal} style={{color: colors.text}}>
                   <div className={styles.inputRow} style={{alignItems: 'baseline', justifyContent: 'space-between'}}>
                      <button className={styles.clearButton} style={{padding: 5, border: 'none'}} onClick = {closeModal}> 
                            <img src={require('../assets/x-close.svg')} alt="close button"/>
@@ -55,7 +55,7 @@ export const InfoModal = () => {
                            </div>
                         </div>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                           <a href="www.savaslabs.com">
+                           <a style={{color: colors.link}} href="www.savaslabs.com">
                               Learn more about our #labs initiative.
                            </a>
                            <div>
@@ -73,7 +73,6 @@ export const InfoModal = () => {
          <button style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
             <img
                className={styles.icon}
-               // style={{backgroundColor: colors.background, margin: 0}}
                src={(theme == 'light') ? require('../assets/info.svg') : require('../assets/info-white.svg')}
                />
             </button>
@@ -81,34 +80,4 @@ export const InfoModal = () => {
 )}
 
 export default InfoModal
-
-// const styles = StyleSheet.create ({
-//     container: {
-//        padding: 10,
-//     },
-//     modal: {
-//       flex: 1,
-//       marginHorizontal: 8,
-//     },
-//     normalText: {
-//       fontFamily: 'JetBrainsMono-Regular', 
-//       fontSize: 14,
-//       lineHeight: 20,
-//       marginTop: 10,
-//       textAlign: 'center',
-//     },
-//     description: {
-//       fontFamily: 'JetBrainsMono-Regular', 
-//       fontSize: 20,
-//       lineHeight: 28,
-//       marginTop: 10,
-//       textAlign: 'center',
-//       padding: 20,
-//     },
-//     clear: {
-//        fontFamily: 'JetBrainsMono-Bold',
-//        padding: 10,
-//        fontSize: 18,
-//     }
-// })
 
