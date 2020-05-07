@@ -1,17 +1,15 @@
 import React, { useContext } from 'react';
+import Modal from 'react-modal';
 import { Title } from './Title';
 import { Footer } from './Footer';
 import { Dashes } from './Dashes';
-import useModal from '../hooks/useModal.js'
 import AppContext from './AppContext';
 import styles from '../theme/appstyles.module.css';
-import Modal from 'react-modal';
 
 export const InfoModal = () => {
    const context = useContext(AppContext)
    const theme = context.theme
    const { colors } = context.useTheme()
-   //const { isShowing, toggle } = useModal();
 
    const [modalIsOpen,setIsOpen] = React.useState(false);
    function openModal() {
@@ -19,23 +17,12 @@ export const InfoModal = () => {
    }
   
    function afterOpenModal() {
-     // references are now sync'd and can be accessed.
+     // @TODO can probably be removed
    }
   
    function closeModal(){
      setIsOpen(false);
    }
-
-   const customStyles = {
-      content : {
-        top                   : '25%',
-        left                  : '50%',
-        right                 : 'auto',
-        bottom                : 'auto',
-        marginRight           : '-50%',
-        transform             : 'translate(-50%, -50%)'
-      }
-    };
 
    return (
       <div>
@@ -43,37 +30,42 @@ export const InfoModal = () => {
             isOpen = {modalIsOpen}
             onAfterOpen = {afterOpenModal}
             onRequestClose = {closeModal}
-            style={customStyles}
+            style={{content: {top: 5, left: '15%', right: '15%', bottom: 5}}}
             >
             <div>
                <div className={styles.modal}>
-                  <div className={styles.inputRow} style={{alignContent: 'center', justifyContent: 'space-between'}}>
-                     <button className={styles.clearButton} style={{padding: 5, border: 'none', alignSelf: 'flex-start'}} onClick = {closeModal}> 
-                           X
+                  <div className={styles.inputRow} style={{alignItems: 'baseline', justifyContent: 'space-between'}}>
+                     <button className={styles.clearButton} style={{padding: 5, border: 'none'}} onClick = {closeModal}> 
+                           <img src={require('../assets/x-close.svg')} alt="close button"/>
                      </button>
-                     <Title style={{alignSelf: 'flex-center'}}/>
-                     <div></div>
+                     <div>
+                        <Title/>
+                     </div> 
+                     <div style={{paddingLeft: '14%'}}></div>                    
                   </div>
                   <Dashes />
-                  <div className={styles.normalText}>What is this app?</div>
-                  <div className={styles.normalText}>A means to enhance palindromic whimsy.</div>
-                  <div style={{display: 'flex', justifyContent: 'flex-end', marginBottom: 30}}>
-                     <div style={{flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center'}}>
-                        <div style = {{textAlign: 'left'}}>(c) Savas Labs 2020</div>
-                        <div style={{flex: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'flex-end'}}>
-                           <img src={require('../assets/ava-blue.png')} />
+                  <div>
+                     <div className={styles.normalText} style={{textAlign: 'center', paddingTop: 15}}>What is this app?</div>
+                     <div className={styles.label} style={{textAlign: 'center', paddingTop: 15}}>A means to enhance palindromic whimsy.</div>
+                     <div className={styles.footer} style={{position: 'absolute', bottom: 30,  width: '90%'}}>
+                        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                           <div>(c) Savas Labs 2020</div>
+                           <div style={{paddingRight: 10}}>
+                              <img src={require('../assets/ava-blue.svg')} />
+                           </div>
                         </div>
-                        
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                           <a href="www.savaslabs.com">
+                              Learn more about our #labs initiative.
+                           </a>
+                           <div>
+                              <img style={{textAlign: 'center'}} src={require('../assets/labs.svg')} alt={"Savas Labs logo"}/>
+                           </div>
+                        </div>
                      </div>
-                     <div style={{flexDirection: 'row', justifyContent: 'space-between', alignContent: 'center'}}>
-                        <div>
-                           Learn more about our #labs initiative.
-                        </div>
-                        <div>
-                           <img src={require('../assets/labs.png')}/>
-                        </div>
-                     </div>
+
                   </div>
+                  
                   <Footer />
                </div>
             </div>  

@@ -6,7 +6,7 @@ import { Dashes } from './Dashes';
 
 export const Header = () => (
   <React.Fragment>
-    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+    <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between'}}>
       <InfoModal />
       <Title /> 
       <div></div>

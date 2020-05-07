@@ -9,6 +9,7 @@
 
 h1 {
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 /* Calculator styles */
@@ -82,3 +83,8 @@ tr {
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+.footer {
+    font-size: 12px;
+    line-height: 20px;
+}
