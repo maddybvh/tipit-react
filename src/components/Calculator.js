@@ -98,9 +98,11 @@ export const Calculator = () => {
   
   const handleTipLow = (text) => {
     setTipLow(text);
+    context.updateTipLowContext(text);
   }
   const handleTipHigh = (text) => {
-    setTipHigh(text)
+    setTipHigh(text);
+    context.updateTipHighContext(text);
   }
   const clearTable = () => {
     setMessage('');
@@ -157,12 +159,12 @@ export const Calculator = () => {
             </div>
             <div className={styles.inputGroup} style={{marginRight: 8}}>
                 <PercentInput
-                    defaultValue={context.defaultTipLow}
+                    value={context.defaultTipLow}
                     onChange={handleTipLow}
                 />
                 <div className={styles.normalText} style={{paddingLeft: 15, paddingRight: 5}}>to</div>
                 <PercentInput
-                    defaultValue={context.defaultTipHigh}
+                    value={context.defaultTipHigh}
                     onChange={handleTipHigh}
                 />                
             </div>
