@@ -8,7 +8,7 @@ export const Dashes = () => {
     <img 
       src={(theme === 'light') ? require('../assets/dashes.svg') : require('../assets/dashes-white.svg')}
       alt='dashes'
-      style={{width: '100%'}}
-      ></img>
+      style={{width: 500}}
+      />
   )
 }

@@ -171,21 +171,24 @@ export const Calculator = () => {
           </div>
           <React.Fragment>
             {/* If there are results, print the message and clear button. */}
-            {results.length > 0 &&
-                <div className={styles.inputRow} style={{alignItems: 'flex-start'}}>
-                    <div className={styles.normalText} style={{paddingTop: 10}}>
-                      {message}
-                    </div>
-                    <button 
-                      onClick={clearAll}
-                      className={styles.clearButton} >
-                        X Clear
-                    </button>
+            <div style={{minHeight: 50, paddingTop: 10, display: 'flex', alignItems: 'flex-end'}}>
+              {results.length > 0 &&
+                  <div className={styles.inputRow} style={{width: '100%', alignItems: 'flex-end'}}>
+                      <div className={styles.normalText} style={{textAlign: 'left'}}>
+                        {message}
+                      </div>
+                      <button 
+                        onClick={clearAll}
+                        className={styles.clearButton}
+                        style={{padding: 10}}>
+                          X Clear
+                      </button>
+                  </div>
+                  }
                 </div>
-                }
           </React.Fragment>
           <React.Fragment >
-            <div style={{position: 'fixed', top: 265, left: '15%', right: '15%', minWidth: 250}}>
+            <div style={{width: 500}}>
               <Dashes />
             
             {/* If there are results, print the results table. */}

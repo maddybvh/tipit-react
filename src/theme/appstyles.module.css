@@ -12,10 +12,10 @@ body {
 }
 .container {
     margin: auto;
-    width: 70%;
     min-height: 600px;
-    min-width: 300px;
-    padding: 10;
+    max-width: 500px;
+    margin-left: 10;
+    margin-right: 10;
     text-align: center;
   }
 
@@ -62,7 +62,7 @@ h1 {
 .inputRow {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
 input {
