@@ -33,10 +33,10 @@ export const SettingsModal = () => {
             isOpen = {modalIsOpen}
             onAfterOpen = {afterOpenModal}
             onRequestClose = {closeModal}
-            style={{content: {top: 5, left: '15%', right: '15%', bottom: 5, backgroundColor: colors.background}}}
+            style={{content: {top: 5, bottom: 5, margin: 'auto', maxWidth: 500, backgroundColor: colors.background}}}
             >
 
-            <div>
+            <div className={styles.container}>
                <div className={styles.inputRow} style={{alignItems: 'baseline', justifyContent: 'space-between'}}>
                   <div style={{paddingLeft: '14%'}}></div>
                   <div>
