@@ -39,17 +39,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Deployment
 
-<<<<<<< HEAD
-### `npm run deploy` 
-Deploys to https://maddybvh.github.io/tipit-react/ . This can be configured in `package.json`.
-
-=======
 1. Merge `master` into `github-pages`
 2. Run `npm run deploy` 
 
 Deploys to https://maddybvh.github.io/tipit-react/ . This can be configured in `package.json`.
 
->>>>>>> master
 ## PWA
 PWA functionality can be turned on or off by updating a function in src/index.js.
 Documentation: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
