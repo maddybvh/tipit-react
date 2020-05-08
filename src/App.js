@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Header } from './components/Header'
 import { Calculator } from './components/Calculator'
@@ -8,6 +8,7 @@ import { themedColors } from './theme/index'
 import styles from './theme/appstyles.module.css';
 
 export default function App () {
+<<<<<<< HEAD
   const _storeData = () => {
     try {
       localStorage.clear();
@@ -39,6 +40,8 @@ export default function App () {
     }
     setInitialAppLoad(false);
   };
+=======
+>>>>>>> master
 
   const [defaultTipLow, setDefaultTipLow] = useState('18');
   const [defaultTipHigh, setDefaultTipHigh] = useState('25');
@@ -67,19 +70,23 @@ export default function App () {
   }
   
   //This is a repeat of useTheme() in /AppContext
+<<<<<<< HEAD
   const colors = userSettings.theme ? themedColors[userSettings.theme] : themedColors.default
 
   useEffect(() => { initialAppLoad ? _retrieveData() : _storeData() })
+=======
+  const colors = userSettings.theme ? themedColors[userSettings.theme] : themedColors.default;
+>>>>>>> master
 
     return (
       <AppContext.Provider value={userSettings}>
-        <body style={{backgroundColor: colors.background, color: colors.text}}>
+        <div className={styles.body} style={{backgroundColor: colors.background, color: colors.text}}>
           <div className={styles.container}>
             <Header />
             <Calculator />
             <Footer />
           </div>
-        </body>
+        </div>
       </AppContext.Provider>
     )
   // }
