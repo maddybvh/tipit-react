@@ -11,12 +11,11 @@ export const CurrencyInput = ({ value, onChange, ...props}) => {
         <div style={{display: 'inline-flex', alignItems: 'center', color: colors.text}}>
             <span 
                 className={styles.label}
-                style={{marginRight: -20, zIndex: 1}}
                 >
                 $
             </span>
             <input
-                style={{paddingLeft: 20, backgroundColor: colors.background, color: colors.text}}
+                style={{paddingLeft: 5, backgroundColor: colors.background, color: colors.text}}
                 value={value}
                 onChange={e => onChange(e.target.value)}
                 />

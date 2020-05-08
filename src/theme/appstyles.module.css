@@ -110,3 +110,6 @@ tr:nth-child(even) {
     width: 18px;
 }
 
+.icon:hover{
+    fill: #F35A69;
+}
