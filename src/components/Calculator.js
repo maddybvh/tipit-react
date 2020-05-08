@@ -143,7 +143,7 @@ export const Calculator = () => {
     <div style={{marginLeft: 5, marginRight: 5}}>                         
         <div className={styles.inputRow}>
           <div style={{textAlign: "left"}}>
-            <label for="bill" name="bill" id="bill" aria-label="Bill amount" className={styles.label}>Your Bill:</label>
+            <label htmlFor="bill" name="bill" id="bill" aria-label="Bill amount" className={styles.label}>Your Bill:</label>
             <div className={styles.helper}>Pre-tip amount</div>
           </div>
           <CurrencyInput
@@ -154,7 +154,7 @@ export const Calculator = () => {
         </div>
         <div className={styles.inputRow} style={{marginTop: 20}}>
             <div style={{textAlign: "left"}}>
-              <label for="tip range" name="tip range" id="tip range" aria-label="Tip range low to high" className={styles.label}>Tip Range:</label>
+              <label htmlFor="tip range" name="tip range" id="tip range" aria-label="Tip range low to high" className={styles.label}>Tip Range:</label>
               <div className={styles.helper}>Low to high</div>
             </div>
             <div className={styles.inputGroup} style={{marginRight: 8}}>
