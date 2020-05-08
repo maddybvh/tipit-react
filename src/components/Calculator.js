@@ -174,7 +174,7 @@ export const Calculator = () => {
             {/* If there are results, print the message and clear button. */}
             <div style={{minHeight: 50, paddingTop: 10, display: 'flex', alignItems: 'flex-end'}}>
               {results.length > 0 &&
-                  <div className={styles.inputRow} style={{width: '100%', alignItems: 'flex-end'}}>
+                  <div className={styles.inputRow} style={{width: '90%', alignItems: 'flex-end'}}>
                       <div className={styles.normalText} style={{textAlign: 'left'}}>
                         {message}
                       </div>
@@ -190,15 +190,14 @@ export const Calculator = () => {
                 </div>
           </React.Fragment>
           <React.Fragment >
-            <div style={{width: 500}}>
+            <div style={{maxWidth: 500}}>
               <Dashes />
-            
-            {/* If there are results, print the results table. */}
-            {results.length > 0 &&
-              <Results results={results}/>
-            }
+              {/* If there are results, print the results table. */}
+              {results.length > 0 &&
+                <Results results={results}/>
+              }
             </div>
-          </React.Fragment>               
+          </React.Fragment>             
     </div>
     );
   }
