@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Header } from './components/Header'
 import { Calculator } from './components/Calculator'
@@ -8,7 +8,6 @@ import { themedColors } from './theme/index'
 import styles from './theme/appstyles.module.css';
 
 export default function App () {
-<<<<<<< HEAD
   const _storeData = () => {
     try {
       localStorage.clear();
@@ -17,7 +16,8 @@ export default function App () {
         defaultTipHigh: userSettings.defaultTipHigh,
         theme: userSettings.theme,
       }
-      localStorage.setItem('@store:appContext', settingsToSave);
+      localStorage.setItem('@store:appContext', JSON.stringify(settingsToSave));
+      console.log("saved " + settingsToSave)
     } catch (error) {
       console.log('Error saving user settings.')
     }
@@ -28,7 +28,7 @@ export default function App () {
   const _retrieveData = () => {
     try {
       const value = localStorage.getItem('@store:appContext');
-      const savedSettings = value
+      const savedSettings = JSON.parse(value)
       if (savedSettings !== null) {
         setDefaultTipLow(savedSettings.defaultTipLow)
         setDefaultTipHigh(savedSettings.defaultTipHigh)
@@ -40,8 +40,6 @@ export default function App () {
     }
     setInitialAppLoad(false);
   };
-=======
->>>>>>> master
 
   const [defaultTipLow, setDefaultTipLow] = useState('18');
   const [defaultTipHigh, setDefaultTipHigh] = useState('25');
@@ -70,13 +68,9 @@ export default function App () {
   }
   
   //This is a repeat of useTheme() in /AppContext
-<<<<<<< HEAD
   const colors = userSettings.theme ? themedColors[userSettings.theme] : themedColors.default
 
   useEffect(() => { initialAppLoad ? _retrieveData() : _storeData() })
-=======
-  const colors = userSettings.theme ? themedColors[userSettings.theme] : themedColors.default;
->>>>>>> master
 
     return (
       <AppContext.Provider value={userSettings}>
