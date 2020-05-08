@@ -9,7 +9,11 @@ export const PercentInput = ({ value, onChange, ...props}) => {
         <React.Fragment>
             <div style={{display: 'flex', alignItems: 'baseline', maxWidth: 40, marginRight: 15, color: colors.text}}>
                 <input 
-                    style={{maxWidth: 40, paddingRight: 20, textAlign: 'right', backgroundColor: colors.background, color: colors.text}}
+                    style={{minWidth: 40, paddingRight: 20, textAlign: 'right', backgroundColor: colors.background, color: colors.text}}
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="1"
                     value={value}
                     onChange={e => onChange(e.target.value)}
                     />

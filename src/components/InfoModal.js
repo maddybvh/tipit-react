@@ -38,7 +38,8 @@ export const InfoModal = () => {
                      <button className={styles.button} style={{padding: 15, border: 'none', backgroundColor: colors.background}} onClick = {closeModal}> 
                            <img 
                               className={styles.icon}
-                              src={(theme == 'light') ? require('../assets/x-close.svg') : require('../assets/x-close-pink.svg')} alt="close button"/>
+                              src={(theme == 'light') ? require('../assets/x-close.svg') : require('../assets/x-close-pink.svg')} 
+                              alt="close button"/>
                      </button>
                      <div>
                         <Title/>
