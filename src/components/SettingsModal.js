@@ -48,7 +48,7 @@ export const SettingsModal = () => {
                <Footer />
             </div>
          </Modal>
-         <button style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
+         <button id="openSettings" style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
             <img
                className={styles.icon}
                src={(theme === 'light') ? require('../assets/settings.svg') : require('../assets/settings-white.svg')}

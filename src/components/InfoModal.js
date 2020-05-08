@@ -73,7 +73,7 @@ export const InfoModal = () => {
                </div>
             </div>  
          </Modal>
-         <button type="image" style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
+         <button type="image" id="openInfo" style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
             <img
                className={styles.icon}
                src={(theme === 'light') ? require('../assets/info.svg') : require('../assets/info-white.svg')}
