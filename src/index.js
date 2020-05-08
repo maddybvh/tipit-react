@@ -11,5 +11,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//Change to serviceWork.unregister to turn off PWA.
-serviceWorker.register();
+//Change to serviceWork.register to turn on PWA.
+serviceWorker.unregister();
