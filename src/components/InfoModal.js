@@ -60,7 +60,7 @@ export const InfoModal = () => {
                            </div>
                         </div>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                           <a style={{color: colors.link}} href="www.savaslabs.com">
+                           <a style={{color: colors.link}} href="https://savaslabs.com">
                               Learn more about our #labs initiative.
                            </a>
                            <div>
