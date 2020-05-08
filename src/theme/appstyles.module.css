@@ -41,7 +41,6 @@ h1 {
 .clearButton {
     font-size: 12px;
     line-height: 14px;
-    color: #FF0000;
     text-align: 'right';
     padding: 12;
     border: none;
@@ -51,8 +50,12 @@ h1 {
     font-family: 'JetBrains Mono';
 }
 .clearButton:hover {
-    border: 1px black solid;
+    border: 1px #A9A9A9 solid;
     border-radius: 3px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.clearButton:focus {
     background-color: #f2f2f2;
     font-weight: bold;
 }
@@ -80,6 +83,10 @@ input {
     font-size: 18px;
     background-color: none;
     font-family: 'JetBrains Mono';
+}
+
+input:focus {
+    font-weight: bold;
 }
 
 /* Results styles */
@@ -126,6 +133,10 @@ tr:nth-child(even) {
 }
 
 a:hover{
+    font-weight: bold;
+}
+
+a:focus{
     font-weight: bold;
 }
 

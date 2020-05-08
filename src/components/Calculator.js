@@ -180,7 +180,7 @@ export const Calculator = () => {
                       <button 
                         onClick={clearAll}
                         className={styles.clearButton}
-                        style={{padding: 10}}>
+                        style={{padding: 10, color: colors.clear}}>
                           X Clear
                       </button>
                   </div>
