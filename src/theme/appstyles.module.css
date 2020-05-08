@@ -21,7 +21,7 @@ body {
 
 h1 {
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 5px;
 }
 
 /* Calculator styles */
@@ -106,7 +106,7 @@ tr:nth-child(even) {
 }
 
 .icon {
-    height: 30px;
-    width: 30px;
+    height: 18px;
+    width: 18px;
 }
 
