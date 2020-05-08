@@ -61,7 +61,7 @@ export default function App () {
   }
 
   const toggleTheme = () => {
-    theme == 'light' ? setTheme('dark') : setTheme('light');
+    theme === 'light' ? setTheme('dark') : setTheme('light');
   }
 
   const userSettings = { 

@@ -38,7 +38,7 @@ export const InfoModal = () => {
                      <button className={styles.button} style={{padding: 15, border: 'none', backgroundColor: colors.background}} onClick = {closeModal}> 
                            <img 
                               className={styles.icon}
-                              src={(theme == 'light') ? require('../assets/x-close.svg') : require('../assets/x-close-pink.svg')} 
+                              src={(theme === 'light') ? require('../assets/x-close.svg') : require('../assets/x-close-pink.svg')} 
                               alt="close button"/>
                      </button>
                      <div>
@@ -54,7 +54,7 @@ export const InfoModal = () => {
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                            <div>(c) Savas Labs 2020</div>
                            <div style={{paddingRight: 10}}>
-                              <img src={require('../assets/ava-blue.svg')} />
+                              <img alt="Savas logo - Ava the owl" src={require('../assets/ava-blue.svg')} />
                            </div>
                         </div>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -62,7 +62,7 @@ export const InfoModal = () => {
                               Learn more about our #labs initiative.
                            </a>
                            <div>
-                              <img style={{textAlign: 'center'}} src={require('../assets/labs.svg')} alt={"Savas Labs logo"}/>
+                              <img style={{textAlign: 'center'}} src={require('../assets/labs.svg')} alt={"Savas labs initiative logo"}/>
                            </div>
                         </div>
                      </div>
@@ -73,10 +73,11 @@ export const InfoModal = () => {
                </div>
             </div>  
          </Modal>
-         <button style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
+         <button type="image" style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
             <img
                className={styles.icon}
-               src={(theme == 'light') ? require('../assets/info.svg') : require('../assets/info-white.svg')}
+               src={(theme === 'light') ? require('../assets/info.svg') : require('../assets/info-white.svg')}
+               alt="info icon"
                />
             </button>
       </div>

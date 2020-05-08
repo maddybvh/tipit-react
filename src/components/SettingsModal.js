@@ -18,10 +18,6 @@ export const SettingsModal = () => {
      setIsOpen(true);
    }
   
-   function afterOpenModal() {
-     // @TODO can probably be removed
-   }
-  
    function closeModal(){
      setIsOpen(false);
    }
@@ -31,11 +27,9 @@ export const SettingsModal = () => {
 
          <Modal 
             isOpen = {modalIsOpen}
-            onAfterOpen = {afterOpenModal}
             onRequestClose = {closeModal}
             style={{content: {top: 5, bottom: 5, margin: 'auto', maxWidth: 500, backgroundColor: colors.background}}}
             >
-
             <div className={styles.container}>
                <div className={styles.inputRow} style={{alignItems: 'baseline', justifyContent: 'space-between'}}>
                   <div style={{paddingLeft: '14%'}}></div>
@@ -45,7 +39,7 @@ export const SettingsModal = () => {
                   <button className={styles.button} style={{padding: 15, border: 'none', backgroundColor: colors.background}} onClick = {closeModal}> 
                      <img 
                         className={styles.icon}
-                        src={(theme == 'light') ? require('../assets/x-close.svg') : require('../assets/x-close-pink.svg')} 
+                        src={(theme === 'light') ? require('../assets/x-close.svg') : require('../assets/x-close-pink.svg')} 
                         alt="close button"/>
                   </button>                  
                </div>
@@ -57,7 +51,8 @@ export const SettingsModal = () => {
          <button style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
             <img
                className={styles.icon}
-               src={(theme == 'light') ? require('../assets/settings.svg') : require('../assets/settings-white.svg')}
+               src={(theme === 'light') ? require('../assets/settings.svg') : require('../assets/settings-white.svg')}
+               alt="settings icon"
                />
          </button>
       </div>

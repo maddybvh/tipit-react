@@ -1,11 +1,6 @@
-import React, { useContext } from 'react';
-import AppContext from './AppContext';
-import styles from '../theme/appstyles.module.css';
+import React from 'react';
 
 export const Results = ({results}) =>  {    
-    const context = useContext(AppContext)
-    const { colors } = context.useTheme()
-
     const renderTableData = () => {
         
         return results.map((result) => {
