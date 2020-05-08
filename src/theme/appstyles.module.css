@@ -1,7 +1,7 @@
 html { 
     height:100%; 
 }
-body { 
+.body { 
     position: absolute; 
     top: 0; 
     bottom: 0; 
