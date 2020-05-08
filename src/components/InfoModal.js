@@ -7,6 +7,8 @@ import AppContext from './AppContext';
 import styles from '../theme/appstyles.module.css';
 
 export const InfoModal = () => {
+   Modal.setAppElement('#root');
+   
    const context = useContext(AppContext)
    const theme = context.theme
    const { colors } = context.useTheme()
