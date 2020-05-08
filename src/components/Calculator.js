@@ -141,7 +141,7 @@ export const Calculator = () => {
   }, [bill, tipLow, tipHigh])
 
   return (
-    <div style={{marginLeft: 5, marginRight: 5}}>                         
+    <div style={{marginLeft: 5, marginRight: 5, backgroundColor: colors.background}}>                         
         <div className={styles.inputRow}>
           <div style={{textAlign: "left"}}>
             <label htmlFor="bill" name="bill" id="bill" aria-label="Bill amount" className={styles.label}>Your Bill:</label>
@@ -174,7 +174,7 @@ export const Calculator = () => {
             {/* If there are results, print the message and clear button. */}
             <div style={{minHeight: 50, paddingTop: 10, display: 'flex', alignItems: 'flex-end'}}>
               {results.length > 0 &&
-                  <div className={styles.inputRow} style={{width: '90%', alignItems: 'flex-end'}}>
+                  <div className={styles.inputRow} style={{width: '100%', alignItems: 'flex-end'}}>
                       <div className={styles.normalText} style={{textAlign: 'left'}}>
                         {message}
                       </div>

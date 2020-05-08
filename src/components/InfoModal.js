@@ -70,7 +70,6 @@ export const InfoModal = () => {
                      </div>
 
                   </div>
-                  
                   <Footer />
                </div>
             </div>  

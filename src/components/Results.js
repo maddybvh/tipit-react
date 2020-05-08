@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from './AppContext';
+import styles from '../theme/appstyles.module.css';
 
-export const Results = ({results}) =>  {    
+
+export const Results = ({results}) =>  { 
+    const context = useContext(AppContext)
+    const { colors } = context.useTheme()
+    
+
     const renderTableData = () => {
         
         return results.map((result) => {
@@ -16,15 +23,17 @@ export const Results = ({results}) =>  {
     }
 
     return (
-        <table>
-            <tbody>
-            <tr>
-                <th scope="col" style={{textAlign: 'left'}}>Bill</th>
-                <th scope="col" style={{textAlign: 'left'}}>Tip</th>
-                <th scope="col" style={{textAlign: 'right'}}>Total</th>
-            </tr>
-            {renderTableData()}
-            </tbody>
-        </table>
+        <div className={styles.tableWrapper}>
+            <table>
+                <tbody>
+                    <tr>
+                        <th scope="col" style={{textAlign: 'left'}}>Bill</th>
+                        <th scope="col" style={{textAlign: 'left'}}>Tip</th>
+                        <th scope="col" style={{textAlign: 'right'}}>Total</th>
+                    </tr>
+                    {renderTableData()}
+                </tbody>
+            </table>
+        </div>
     );
 }
