@@ -137,6 +137,7 @@ export const Calculator = () => {
 
   useEffect(() => {
     setResults(findResults)
+  // eslint-disable-next-line
   }, [bill, tipLow, tipHigh])
 
   return (
