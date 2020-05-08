@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Modal from 'react-modal';
 import { Title } from './Title';
-import { Footer } from './Footer';
 import { Dashes } from './Dashes';
 import AppContext from './AppContext';
 import styles from '../theme/appstyles.module.css';
@@ -32,7 +31,7 @@ export const InfoModal = () => {
             isOpen = {modalIsOpen}
             onAfterOpen = {afterOpenModal}
             onRequestClose = {closeModal}
-            style={{content: {top: 5, bottom: 5, margin: 'auto', maxWidth: 500, backgroundColor: colors.background}}}
+            style={{content: {top: 20, bottom: 20, margin: 'auto', maxWidth: 500, backgroundColor: colors.background}}}
             >
             <div>
                <div className={styles.container} style={{color: colors.text}}>
@@ -52,7 +51,7 @@ export const InfoModal = () => {
                   <div>
                      <div className={styles.normalText} style={{textAlign: 'center', paddingTop: 15}}>What is this app?</div>
                      <div className={styles.label} style={{textAlign: 'center', paddingTop: 15}}>A means to enhance palindromic whimsy.</div>
-                     <div className={styles.footer} style={{position: 'absolute', bottom: 30,  width: '90%'}}>
+                     <div className={styles.footer} style={{position: 'absolute', bottom: 10,  width: '90%'}}>
                         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                            <div>(c) Savas Labs 2020</div>
                            <div style={{paddingRight: 10}}>
@@ -67,10 +66,9 @@ export const InfoModal = () => {
                               <img style={{textAlign: 'center'}} src={require('../assets/labs.svg')} alt={"Savas labs initiative logo"}/>
                            </div>
                         </div>
+                        <Dashes />
                      </div>
-
                   </div>
-                  <Footer />
                </div>
             </div>  
          </Modal>

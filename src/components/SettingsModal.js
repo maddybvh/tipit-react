@@ -30,7 +30,7 @@ export const SettingsModal = () => {
          <Modal 
             isOpen = {modalIsOpen}
             onRequestClose = {closeModal}
-            style={{content: {top: 5, bottom: 5, margin: 'auto', maxWidth: 500, backgroundColor: colors.background}}}
+            style={{content: {top: 20, bottom: 20, margin: 'auto', maxWidth: 500, backgroundColor: colors.background}}}
             >
             <div className={styles.container}>
                <div className={styles.inputRow} style={{alignItems: 'baseline', justifyContent: 'space-between'}}>
@@ -47,7 +47,7 @@ export const SettingsModal = () => {
                </div>
                <Dashes />
                <Settings />
-               <Footer />
+               <Dashes />
             </div>
          </Modal>
          <button id="openSettings" style={{padding: 5, border: 'none', backgroundColor: colors.background}} onClick = {openModal}>
