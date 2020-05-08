@@ -42,8 +42,10 @@ export const SettingsModal = () => {
                   <div>
                      <Title/>
                   </div>
-                  <button className={styles.clearButton} style={{padding: 5, border: 'none'}} onClick = {closeModal}> 
-                        <img src={require('../assets/x-close.svg')} alt="close button"/>
+                  <button className={styles.button} style={{padding: 15, border: 'none', backgroundColor: colors.background}} onClick = {closeModal}> 
+                     <img 
+                        className={styles.icon}
+                        src={require('../assets/x-close.svg')} alt="close button"/>
                   </button>                  
                </div>
                <Dashes />

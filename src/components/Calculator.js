@@ -140,7 +140,7 @@ export const Calculator = () => {
   }, [bill, tipLow, tipHigh])
 
   return (
-    <div>                         
+    <div style={{marginLeft: 5, marginRight: 5}}>                         
         <div className={styles.inputRow}>
           <div style={{textAlign: "left"}}>
             <div className={styles.label}>Your Bill:</div>
