@@ -31,6 +31,7 @@ h1 {
 .helper {
     font-size: 10px;
     line-height: 14px;
+    font-style: italic;
 }
 
 .normalText {
@@ -139,4 +140,3 @@ a:hover{
 a:focus{
     font-weight: bold;
 }
-
