@@ -17,7 +17,6 @@ export default function App () {
         theme: userSettings.theme,
       }
       localStorage.setItem('@store:appContext', JSON.stringify(settingsToSave));
-      console.log("saved " + settingsToSave)
     } catch (error) {
       console.log('Error saving user settings.')
     }
@@ -34,7 +33,6 @@ export default function App () {
         setDefaultTipHigh(savedSettings.defaultTipHigh)
         setTheme(savedSettings.theme)
       }
-      console.log(savedSettings)
     } catch (error) {
       console.log('No user setting data was retrieved');
     }
@@ -83,6 +81,5 @@ export default function App () {
         </div>
       </AppContext.Provider>
     )
-  // }
 }
 
