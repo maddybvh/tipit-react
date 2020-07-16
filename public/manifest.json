@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "tipit",
+  "name": "tipit - palindrome tip calculator",
   "icons": [
     {
       "src": "favicon.ico",
